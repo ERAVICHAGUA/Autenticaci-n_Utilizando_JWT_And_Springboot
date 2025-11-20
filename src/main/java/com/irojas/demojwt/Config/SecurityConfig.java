@@ -22,25 +22,32 @@ public class SecurityConfig {
     private final AuthenticationProvider authProvider;
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
-    {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
-            .csrf(csrf -> 
-                csrf
-                .disable())
-            .authorizeHttpRequests(authRequest ->
-              authRequest
-                .requestMatchers("/auth/**").permitAll()
-                .anyRequest().authenticated()
-                )
-            .sessionManagement(sessionManager->
-                sessionManager 
-                  .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authenticationProvider(authProvider)
-            .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-            .build();
-            
-            
-    }
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth
 
+                        // Rutas públicas de la API
+                        .requestMatchers("/auth/**").permitAll()
+
+                        // Archivos estáticos PERMITIDOS (solución correcta)
+                        .requestMatchers(
+                                "/login.html",
+                                "/register.html",
+                                "/home.html",
+                                "/app.js",
+                                "/style.css",
+                                "/images/**",
+                                "/css/**",
+                                "/js/**"
+                        ).permitAll()
+
+                        .anyRequest().authenticated()
+                )
+                .sessionManagement(session ->
+                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authenticationProvider(authProvider)
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
+    }
 }

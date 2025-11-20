@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard JWT</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body class="dashboard-page" onload="checkAuth()">
+
+<div class="dashboard-card">
+    <header class="dashboard-header">
+        <div>
+            <h1>🚀 Dashboard</h1>
+            <p class="dashboard-subtitle">Bienvenido 👋</p>
+        </div>
+        <button class="btn-logout" onclick="logout()">Cerrar sesión</button>
+    </header>
+
+    <p class="dashboard-intro">
+        Inicio de sesión correcto. Tu token JWT está activo y puedes permanecer aquí hasta que expire.
+    </p>
+
+    <div class="dashboard-grid">
+        <section class="dashboard-section">
+            <h2>👤 Perfil</h2>
+            <p>Ver tu información de usuario.</p>
+            <button class="btn-primary" onclick="alert('Aquí podrías mostrar datos del usuario.')">
+                Entrar
+            </button>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>🛡 Seguridad</h2>
+            <p>Ver detalles del token JWT.</p>
+            <button class="btn-primary" onclick="alert('Aquí podrías mostrar el JWT decodificado.')">
+                Entrar
+            </button>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>⚙ Configuración</h2>
+            <p>Ajustes del sistema.</p>
+            <button class="btn-primary" onclick="alert('Aquí podrías configurar opciones del usuario.')">
+                Entrar
+            </button>
+        </section>
+    </div>
+
+    <footer class="dashboard-footer">
+        <small>JWT Demo • Spring Boot + Java 17</small>
+    </footer>
+</div>
+
+</body>
+</html>

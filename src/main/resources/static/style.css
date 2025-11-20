@@ -1,0 +1,180 @@
+/* ======================
+   ESTILO BASE
+   ====================== */
+body {
+    background: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* ======================
+   TARJETA GENÉRICA (login / register)
+   ====================== */
+.card {
+    width: 350px;
+    margin: 60px auto;
+    background: #222;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.card h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Inputs de login/register */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+/* Botones por defecto (login/register) */
+button {
+    background: dodgerblue;
+    color: white;
+    padding: 10px;
+    width: 95%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.secondary {
+    background: #555;
+}
+
+button:hover {
+    background: #1a73e8;
+}
+
+a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+p {
+    margin-top: 10px;
+}
+
+/* ======================
+   DASHBOARD (home.html)
+   ====================== */
+
+.dashboard-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;      /* mismo fondo que login/register */
+    color: #fff;
+}
+
+.dashboard-card {
+    background: #222;      /* misma tarjeta oscura */
+    border-radius: 16px;
+    padding: 30px 32px;
+    width: 960px;
+    max-width: 95%;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* Header del dashboard */
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+}
+
+.dashboard-subtitle {
+    margin: 4px 0 0 0;
+    color: #aaaaaa;
+    font-size: 0.95rem;
+}
+
+/* Intro */
+.dashboard-intro {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+/* Botón de logout (arriba a la derecha) */
+.btn-logout {
+    width: auto;
+    padding: 8px 16px;
+    background: #444;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.btn-logout:hover {
+    background: #666;
+}
+
+/* Grid de secciones */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
+    margin-top: 10px;
+}
+
+/* Tarjetas internas */
+.dashboard-section {
+    background: #181818;
+    border-radius: 12px;
+    padding: 18px 16px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+.dashboard-section h2 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+}
+
+.dashboard-section p {
+    margin: 0 0 12px 0;
+    color: #bbbbbb;
+    font-size: 0.95rem;
+}
+
+/* Botones dentro del dashboard (más pequeños) */
+.btn-primary {
+    width: 100%;
+    padding: 9px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: dodgerblue;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+    background: #1a73e8;
+}
+
+/* Footer */
+.dashboard-footer {
+    margin-top: 22px;
+    text-align: right;
+    color: #777;
+    font-size: 0.8rem;
+}

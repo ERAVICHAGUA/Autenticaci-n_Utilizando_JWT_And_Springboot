@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login JWT</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+<div class="card">
+    <h1>Login</h1>
+
+    <!-- IMPORTANTE: el backend usa username, NO email -->
+    <input id="username" placeholder="Usuario o correo"><br>
+
+    <input id="password" type="password" placeholder="Contraseña"><br>
+
+    <button onclick="login()">Ingresar</button>
+
+    <p>
+        ¿No tienes cuenta?
+        <a href="register.html">Registrarme</a>
+    </p>
+
+    <p id="result"></p>
+</div>
+
+</body>
+</html>

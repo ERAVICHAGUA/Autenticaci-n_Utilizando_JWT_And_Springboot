@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro JWT</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+<div class="card">
+    <h1>Registro</h1>
+
+    <input id="firstname" placeholder="Nombre"><br>
+    <input id="lastname" placeholder="Apellido"><br>
+    <input id="country" placeholder="País"><br>
+
+    <!-- Importante: el backend espera username, NO email -->
+    <input id="username" placeholder="Correo (username)"><br>
+
+    <input id="password" type="password" placeholder="Contraseña"><br>
+
+    <button onclick="register()">Registrar</button>
+
+    <p>
+        ¿Ya tienes cuenta?
+        <a href="login.html">Ir al login</a>
+    </p>
+
+    <p id="result"></p>
+</div>
+
+</body>
+</html>
