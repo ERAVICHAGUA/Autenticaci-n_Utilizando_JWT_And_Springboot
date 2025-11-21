@@ -36,5 +36,8 @@ steps:
         '--memory', '512Mi',
         '--cpu', '1'
       ]
+options:
+    logging: CLOUD_LOGGING_ONLY
+
 images:
   - '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPOSITORY/$_IMAGE:$SHORT_SHA'
